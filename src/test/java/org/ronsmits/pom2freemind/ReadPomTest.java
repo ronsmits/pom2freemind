@@ -19,5 +19,6 @@ public class ReadPomTest {
     @Test
     public void testGetModel2Modules() throws Exception {
         Model model = ReadPom.getModel("testproject/2modules.xml");
+        assertEquals(2, model.getModules().size());
     }
 }
