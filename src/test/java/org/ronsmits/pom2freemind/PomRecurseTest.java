@@ -25,16 +25,10 @@ public class PomRecurseTest {
     @Test
     public void toXML() throws IOException, XmlPullParserException, ParserConfigurationException, TransformerException {
         PomRecurse recurse = new PomRecurse();
-        Pom pom = recurse.recurse("/home/ron/src/skynetparent/pom.xml");
+        Pom pom = recurse.recurse("testproject/pom.xml");
         PomToXml toXml = new PomToXml();
         toXml.createXML(pom);
         System.out.println(toXml.toXml());
     }
 
-    @Test
-    public void behoorlijkDiep() throws IOException, XmlPullParserException {
-        PomRecurse recurse = new PomRecurse();
-        Pom pom = recurse.recurse("/home/ron/src/skynetparent/pom.xml");
-        assertEquals(5, pom.getChildren().size());
-    }
 }

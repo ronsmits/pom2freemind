@@ -15,7 +15,6 @@ public class Pom {
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();
-        model.getParent().getGroupId();
         if (model.getGroupId()==null) {
             builder.append(model.getParent().getGroupId()==null? "": String.format("%s ", model.getParent().getGroupId()));
         } else {
